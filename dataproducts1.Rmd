@@ -1,0 +1,29 @@
+---
+title: "DATA PRODUCTS 1"
+author: "VIDUSHI ANAND"
+date: "February 23, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Developing Data Products Assignment 1
+
+This Markdown is the first assignment for the course Developing Data Products.In this document I have created a web page using R Markdown that features a map created with Leaflet. The map coordinates have been taken from google for my current location.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+ 
+
+## leaflet
+
+
+```{r pressure, echo=FALSE}
+library(leaflet)
+my_map <- leaflet() %>% addTiles() 
+my_map <- my_map %>% addMarkers(lat=28.5602807, lng= 77.33818084810235, popup="My Location")
+my_map
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
